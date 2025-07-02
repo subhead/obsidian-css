@@ -1,0 +1,49 @@
+.nav-folder .nav-folder-title-content:before {
+content: "\1F4C2";
+padding-right: 4px;
+}
+.nav-folder.is-collapsed .nav-folder-title-content:before {
+content: "\1F4C1";
+padding-right: 4px;
+}
+.nav-file-title-content:before {
+content: "\1F4C4";
+padding-right: 4px;
+}
+.nav-file-title[data-path$=".md"] .nav-file-title-content:before {
+content: "\1F4C4"; /* Page Facing Up icon */
+}
+.nav-file-title[data-path$=".base"] .nav-file-title-content:before {
+content: "\1D34C"; /* Tetragram For Stoppage */
+}
+/* For text files (.txt) */
+.nav-file-title[data-path$=".txt"] .nav-file-title-content:before {
+content: "\1F4D1"; /* Bookmark Tabs icon */
+}
+/* For images (.png, .jpg) */
+.nav-file-title[data-path$=".png"] .nav-file-title-content:before,
+.nav-file-title[data-path$=".jpg"] .nav-file-title-content:before {
+content: "\1F5BC"; /* Framed Picture icon */
+}
+/* For PDFs (.pdf) */
+.nav-file-title[data-path$=".pdf"] .nav-file-title-content:before {
+content: "\1F4D5"; /* Open Book icon */
+}
+/* For ePubs (.epub) */
+.nav-file-title[data-path$=".epub"] .nav-file-title-content:before {
+content: "\1f4d6"; /* Books icon */
+}
+/* For worksheets(.xls, .xlsx) */
+.nav-file-title[data-path$=".xls"] .nav-file-title-content:before,
+.nav-file-title[data-path$=".xlsx"] .nav-file-title-content:before {
+content: "\229E"; /* Memo icon */
+}
+/* For Canvas (.canvas) */
+.nav-file-title[data-path$=".canvas"] .nav-file-title-content:before {
+content: "\1f4dd"; /* Memo icon */
+}
+/* For Excalidraw (.excalidraw) */
+.nav-file-title[data-path$=".excalidraw.md"] .nav-file-title-content:before {
+content: "\1F3A8"; /* Memo icon */
+}
+

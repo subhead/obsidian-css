@@ -1,0 +1,62 @@
+body {
+	--osc-background-color-read: #000000;
+	--osc-background-color-edit: #004080;
+	--osc-color: #00FF00;
+	--osc-font-size-block: 1.25em;
+	--osc-font-size-inline: 1em;
+	--osc-margin-left-right: 1em;
+}
+
+/* Editing inline code */
+.cm-s-obsidian span.cm-inline-code {
+	background-color: var(--osc-background-color-edit);
+	caret-color: yellow; 
+	color: var(--osc-color);
+	font-size: var(--osc-font-size-edit);
+	border-left-color: #ff0000 !important;
+	&::selection {
+		background-color: var(--osc-color);
+		color: var(--osc-background-color-inline);
+	}
+}
+
+/* Editing code block */
+.markdown-source-view.mod-cm6 .cm-line.HyperMD-codeblock {
+	background-color: var(--osc-background-color-edit);
+	caret-color: yellow; 
+	color: var(--osc-color);
+	font-size: var(--osc-font-size-block);
+	margin-left: var(--osc-margin-left-right) !important;
+	margin-right: var(--osc-margin-left-right) !important;
+	border-left-color: #ff0000 !important;
+	> .cm-hmd-codeblock::selection {
+		background-color: var(--osc-color);
+		color: var(--osc-background-color-edit);
+	}
+}
+
+/* Reading inline code */
+.markdown-rendered p > code {
+	background-color: var(--osc-background-color-read);
+	color: var(--osc-color);
+	font-size: var(--osc-font-size-inline);
+	&::selection {
+		background-color: var(--osc-color);
+		color: var(--osc-background-color-read);
+	}
+}
+
+/* Reading code block */
+.markdown-rendered pre {
+	background-color: var(--osc-background-color-read);
+	font-size: var(--osc-font-size-block);
+	& > code {
+		color: var(--osc-color);
+		&::selection {
+			background-color: var(--osc-color);
+			color: var(--osc-background-color-read);
+		}
+	}	
+
+}
+
